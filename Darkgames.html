@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark games</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .navigation::before {
+        content: "";
+        background: url('mumbaigullies.jpg') no-repeat center center/cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.5;
+        top: 0;
+    }
+
+    .navigation {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background-color: black;
+
+    }
+
+    .nav {
+        padding: 10px 0px;
+        margin-top: 15px;
+    }
+
+    .nav a {
+        text-align: center;
+        color: white;
+        font-size: 22px;
+
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .logo1 {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        padding: 1px;
+    }
+
+    .img {
+        height: 44px;
+        width: 174px;
+
+    }
+
+    .nav a:hover {
+        border-radius: 5px;
+        background: white;
+        color: black;
+    }
+
+    .name {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 132px;
+        padding-top: 22px;
+        color: black;
+    }
+
+    .sub-menu-1 {
+        display: none;
+    }
+
+    .nav:hover .sub-menu-1 {
+        display: block;
+        position: absolute;
+        background: black;
+        margin-top: 15px;
+        margin-left: -15px;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+
+    }
+
+
+    .nav:hover .sub-menu-1 ul {
+        display: block;
+        margin: 10px;
+
+    }
+
+    .nav:hover .sub-menu-1 ul li {
+        width: 150px;
+        padding: 10px;
+        border-bottom: 1px dotted white;
+        background: transparent;
+        border-radius: 0;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .sub-menu-1 ul li a:hover {
+        background-color: wheat;
+        border-radius: 3px;
+        font-size: 30px;
+        color: black;
+    }
+
+    .nav:hover .sub-menu-1 ul li:last-child {
+        border-bottom: none;
+    }
+
+    .ourservice {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: black
+    }
+
+    .ourservices {
+        display: block;
+        text-align: center;
+        padding-top: 23px;
+        margin-top: 57px;
+        font-size: 53px;
+    }
+
+    .ourservice h1 {
+        color: white;
+    }
+
+    .block {
+        display: flex;
+    }
+
+    .image {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        width: 271px;
+        height: 267px;
+    }
+
+    .food {
+        border: 2px solid red;
+        background-color: black;
+        text-align: center;
+        padding: 47px 4px;
+        margin: 23px 23px;
+        border-radius: 20px;
+        color: whitesmoke;
+    }
+
+    .food h1 {
+        font-size: 23px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .heading1:hover {
+        color: blue;
+        font-size: 30px;
+    }
+
+    .buy {
+        background-color: red;
+
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-size: 30px;
+
+    }
+
+    .buy a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .buy a:hover {
+        color: blue;
+        border-bottom: blue;
+    }
+
+    .block4 {
+        display: flex;
+        padding: 23px 26px;
+        background-color: black;
+        margin: -2px -70px;
+    }
+
+    .block5 {
+        margin: 0px 100px;
+        color: white;
+    }
+
+    .block5 h1 {
+        margin-right: 23px;
+    }
+
+    .subblock5:hover {
+        text-decoration: underline;
+        color: red;
+        cursor: pointer;
+    }
+
+    input {
+        margin-left: 120px;
+        background-color: black;
+        color: blue;
+        font-size: 30px;
+        border-radius: 10px;
+        border: 2px solid blue;
+    }
+
+    input:hover {
+        color: red;
+        background-color: blue;
+    }
+
+    .subheading {
+        text-align: center;
+    }
+
+    .subblock {
+        margin: 23px 23px;
+        font-size: 20px;
+    }
+
+    .center {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .section3 {
+        background-color: black;
+    }
+
+    #clients {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .client-item img {
+        height: 122px;
+        width: 206px;
+    }
+
+    .subheading1 {
+        text-align: center;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 40px;
+    }
+
+    .block5:hover {
+        cursor: pointer;
+    }
+
+    .subblock5 {
+        font-size: 20px;
+        font-size: 20px;
+        margin: 20px -7px;
+    }
+
+    .hero {
+        width: 100%;
+        top: 425%;
+        left: 49.95%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        text-align: center;
+        /* color: yellow; */
+        background: black;
+    }
+
+    .hero h1 {
+        font-size: 90px;
+        color: transparent;
+        -webkit-text-stroke: 1px yellow;
+        background: url('back.png');
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+
+    @keyframes back {
+        100% {
+            background-position: 20000px 0;
+        }
+    }
+
+    .launched img {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <navbar class="navigation">
+        <div class="logo1"><img class="img" src="download.jpg" alt=""></div>
+        <div class="nav"><a href="#"><i class="fa fa-home"></i>HOME</a></div>
+        <div class="nav"><a href="#"><i class="fa fa-clone"></i>ABOUT US</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav"><a href="#"><i class="fa fa-users"></i>CONTACT US</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">whatsapp</a></li>
+                    <li><a href="#">E-mail</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav"><a href="#"><i class="fa fa-angellist"></i>GENERATION</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Generation 1</a></li>
+                    <li><a href="#">Generation 2</a></li>
+                    <li><a href="#">3D </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav"><a href="#"><i class="fa fa-edit"></i>MODES</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Graphics</a></li>
+                    <li><a href="#">Colour</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav"><a href="#"><i class="fa fa-inr"></i>DONATION</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Paytm</a></li>
+                    <li><a href="#">Google pay</a></li>
+                    <li><a href="#">Phn. pay</a></li>
+                </ul>
+            </div>
+        </div>
+    </navbar>
+    <section class="sec1">
+        <div class="name">
+            DARK GAMES ASSOCIATION PRESENTS
+        </div>
+    </section>
+    <section class="ourservice">
+        <h1 class="ourservices">Our New Releasing GAMES</h1>
+        <div class="block">
+            <div class="food">
+                <img class="image" src="707055.jpg" alt="">
+                <h1 class="heading1">LONDON CRIME</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sint eveniet vel, magni quas
+                    voluptatemLorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sint eveniet vel, magni
+                    quas
+                    voluptatem
+                    culpa saepe quibusdam exercitationem facere?</p>
+            </div>
+            <div class="food">
+                <img class="image" src="220px-Dead_Space_Box_Art.jpg" alt="">
+                <h1 class="heading1">DEAD SPACE</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sint eveniet vel, magni quas
+                    voluptatemLorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sint eveniet vel, magni
+                    quas
+                    voluptatem
+                    culpa saepe quibusdam exercitationem facere?</p>
+            </div>
+            <div class="food">
+                <img class="image" src="delhi.jpg" alt="">
+                <h1 class="heading1">CRIME DELHI</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sint eveniet vel, magni quas
+                    voluptatemLorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sint eveniet vel, magni
+                    quas
+                    voluptatem
+                    culpa saepe quibusdam exercitationem facere?</p>
+            </div>
+        </div>
+    </section>
+    <section class="block3">
+        <h1 class="buy">
+            <a href="#">Click here to buy Red Dead Redemption 2 for PC now</a>
+        </h1>
+        <div class="launched"><img src="launchedgame.jpg" alt=""></div>
+    </section>
+    <section class="block4">
+        <div class="block5">
+            <h1>SHOP</h1>
+            <div class="subblock5">New Arrival</div>
+            <div class="subblock5">Play Station 4</div>
+            <div class="subblock5">X Box 1</div>
+            <div class="subblock5">PC</div>
+            <div class="subblock5">Digitel Downloads</div>
+        </div>
+        <div class="block5">
+            <h1>SHOPPING SUPPORT</h1>
+            <div class="subblock5">Order Lookup</div>
+            <div class="subblock5">Shipping Support</div>
+            <div class="subblock5">Product Information</div>
+            <div class="subblock5">Customer Service</div>
+            <div class="subblock5">Digital Downloads</div>
+            <div class="subblock5">Billing/Payments</div>
+        </div>
+        <div class="block5">
+            <h1>TERMS</h1>
+            <div class="subblock5">Digital River Privacy Policy</div>
+            <div class="subblock5">Digital River</div>
+            <div class="subblock5">Legal Notice</div>
+            <div class="subblock5">Rockstar Privacy Policy</div>
+            <div class="subblock5">Rockstar Cookies Policy</div>
+        </div>
+        <div class="block5">
+            <h1 class="subheading">MAILING LIST</h1>
+            <div class="subblock">Get the early word on new products, game announcements, contests, special events and
+                more by signing up to our mailing list.</div>
+            <div class="form-group">
+                <a href="#"><input type="submit" value="Go"></a>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
+        <h1 class="subheading1">OUR PARTNERS AND INVESTORS</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="rockstar.jpg" alt="">
+            </div>
+            <div class="client-item">
+                <img src="tencent.jpg" alt="">
+            </div>
+            <div class="client-item">
+                <img src="asus.jpg" alt="">
+            </div>
+            <div class="client-item">
+                <img src="xbox.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.DarkGames.com. All rights reserved!
+        </div>
+    </footer>
+    <section>
+        <div class="hero">
+            <h1>ROCKSTAR GAMES <br>DARK GAMES <br>TENCENT <br>X-BOX <br> SONY</h1>
+        </div>
+    </section>
+</body>
+
+</html>
